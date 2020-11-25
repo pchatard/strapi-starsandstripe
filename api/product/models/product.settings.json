@@ -36,6 +36,14 @@
     "type": {
       "model": "type",
       "via": "products"
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "credits": {
+      "type": "string"
     }
   }
 }
