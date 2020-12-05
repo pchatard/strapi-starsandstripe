@@ -8,7 +8,7 @@ let configSettings = {
   ssl: { rejectUnauthorized: false },
 };
 
-if (process.env.NODE_ENV) {
+if (process.env.NODE_ENV === "development") {
   configSettings = {
     client: "postgres",
     host: process.env.DATABASE_HOST_DEV,
