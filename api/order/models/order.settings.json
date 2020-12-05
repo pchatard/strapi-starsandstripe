@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Stars and Stripe Order"
+    },
+    "placed_at": {
+      "type": "datetime",
+      "required": false
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0,
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "products": {
+      "collection": "product"
+    }
+  }
+}
